@@ -1,0 +1,22 @@
+﻿@model List<CityMaster> 
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+@foreach(var t in Model)
+            {
+    <tr><td>@t.Name</td><td>@t.ID</td>
+                        <td>@t.Description</td>
+
+                        <td>
+                            <a href="@Url.Action("EditRecord", "Employee",new{@id= t.ID })">Edit</a>
+                            <a href="@Url.Action("DeleteRecord", "Employee",new{@id= t.ID })">Delete</a>
+
+                        </td>
+    
+    </tr>
+
+            }
+
+</table>

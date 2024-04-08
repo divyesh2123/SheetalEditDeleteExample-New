@@ -1,0 +1,18 @@
+﻿@model CityMaster
+@{
+    ViewBag.Title = "CreateCity";
+}
+
+@using (Html.BeginForm("CreateOrUpdateCity", "Employee", FormMethod.Post))
+{
+    @Html.HiddenFor(y=>y.ID)
+
+    @Html.LabelFor(y => y.Name)
+    @Html.TextBoxFor(y => y.Name)
+
+    @Html.LabelFor(y => y.Description)
+    @Html.TextBoxFor(y => y.Description)
+
+    <input type="submit" value="save"/>
+}
+
